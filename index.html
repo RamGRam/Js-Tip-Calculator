@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tip Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    
+</head>
+<body>
+    <div id="cointainer">
+        <h1>Tip Calculator</h1>
+
+        <div id="calci">
+            <form action="">
+                <label>How Much was Your Bill: <br>
+                    $ <input type="text" id="billAmount">
+                </label>
+                <label>How was Your Service: <br>
+                    <select name="" id="serviceQuality">
+                        <option disabled selected value="0">-- Choose an option --</option>
+                        <option value=".3">30% - Outstanding</option>
+                        <option value=".2">20% - Good</option>
+                        <option value=".15">15% - It was OK!</option>
+                        <option value=".1">10% - It was Bad!</option>
+                        <option value=".05">5% - It was Terrible!</option>
+                    </select>
+                </label>
+                
+                <label>
+                    How many people are sharing the bill? <br>
+                    <input type="text" id="totalPeople"> people
+                </label>
+                <br>
+                <button type="button" id="calculate">Calculate</button>
+            </form>
+        </div><!-- End of calculator -->
+        <div id="totalTip">
+            <sup>$</sup>
+            <span id="tip">0.00</span>
+            <small id="each">each</small>
+        </div><!-- End of totalTip -->
+    </div><!-- End of container -->
+    <script src="js/main.js"></script>
+</body>
+</html>
