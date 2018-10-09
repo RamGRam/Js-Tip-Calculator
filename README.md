@@ -1,0 +1,2 @@
+# flake
+Tip Calculator project
