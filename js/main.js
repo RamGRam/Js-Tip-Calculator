@@ -8,7 +8,7 @@ function calculateTip(){
     var numPeople = document.getElementById("totalPeople").value;
 
     // Basic validation of values
-    if(billAmount === ""|| serviceQuality === 0){
+    if(billAmount === ""|| serviceQuality == 0){
         window.alert("Please enter and select proper value.");
         return;
     }
@@ -29,7 +29,12 @@ function calculateTip(){
     total=Math.round(total*100)/100;
     // Now for limiting to two deciaml places
     total=total.toFixed(2);
-    
+    // DEBUG
+    // window.alert(total);
+
+    // Displaying the tip
+    document.getElementById("totalTip").style.display="block";
+    document.getElementById("tip").innerHTML=total;
 }
 
 // Hide tip amount on initial load
@@ -37,6 +42,7 @@ document.getElementById("totalTip").style.display="none";
 document.getElementById("each").style.display="none";
 
 // Click Function
-document.getElementById("calculate").onClick= function(){
+document.getElementById("calculate").onclick= function(){
+    // console.log("Function call works")
     calculateTip();
 };
